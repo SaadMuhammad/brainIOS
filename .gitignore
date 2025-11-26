@@ -1,0 +1,63 @@
+. (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000000000000000000000000000000000000..f3d9846694fdbeefb80264f8bf6311025cc6ec6a
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,53 @@
++# Xcode
++DerivedData/
++build/
++xcuserdata/
++*.xcworkspace
++*.xcuserstate
++*.moved-aside
++*.pbxuser
++*.mode1v3
++*.mode2v3
++*.perspectivev3
++*.xccheckout
++*.swp
++.DS_Store
++
++# Swift Package Manager
++.build/
++Packages/
++Package.resolved
++
++# CocoaPods
++Pods/
++
++# Carthage
++Carthage/Build/
++
++# SwiftPM generated Xcode project
++*.xcodeproj/project.xcworkspace/
++
++# Fastlane
++fastlane/report.xml
++fastlane/Preview.html
++fastlane/screenshots
++fastlane/test_output
++
++# Python
++__pycache__/
++*.py[cod]
++*.egg-info/
++.eggs/
++.env
++.venv
++.envrc
++.ipynb_checkpoints/
++.pip_cache/
++
++# Data and models
++Python_Lab/data/*.csv
++Python_Lab/data/*.txt
++NeudioiOS/NeudioiOS/Resources/*.mlmodel
++
++# macOS
++*.DS_Store
+ 
+EOF
+)
